@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,300,700')
 serif = 'Nunito', sans-serif
 logo-size = 75px
-spacing = 24px
+spacing = 48px
 my-margin = spacing 0 spacing 0
 
 html,body
@@ -33,7 +33,6 @@ html,body
 	border 5px solid flare-color;
 	border-radius (logo-size/2)	
 	margin spacing
-	margin-bottom 0px
 
 footer
 	flex-center()
@@ -42,6 +41,7 @@ footer
 	
 .cta
 	color (tufte-foreground*3)
+	margin my-margin
 	
 .line
 	width 30%
@@ -58,16 +58,18 @@ h2
 	font-size 2.50rem
 	font-weight 400
 	margin my-margin
+	line-height 3rem
 	
 h3
 	font-size 1.18rem
 	font-weight 700
 	color flare-color
 	margin my-margin
+	line-height 2.5rem
 
 p
 	font-size 1.18rem
-	margin my-margin
+	line-height 2.2rem
 	
 a:link, a:visited, a:active
 	color link-color
@@ -76,3 +78,6 @@ a:link, a:visited, a:active
 a:hover
 	color (link-color*1.2)
 	text-decoration underline
+
+.title
+	margin-top 0px

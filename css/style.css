@@ -71,8 +71,7 @@ body {
   color: #252627;
   border: 5px solid #252627;
   border-radius: 37.5px;
-  margin: 24px;
-  margin-bottom: 0px;
+  margin: 48px;
 }
 footer {
   display: -webkit-box;
@@ -94,10 +93,11 @@ footer {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 24px 0 24px 0;
+  margin: 48px 0 48px 0;
 }
 .cta {
   color: #6f7275;
+  margin: 48px 0 48px 0;
 }
 .line {
   width: 30%;
@@ -108,22 +108,24 @@ h1 {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
   color: #252627;
-  margin: 24px 0 24px 0;
+  margin: 48px 0 48px 0;
 }
 h2 {
   font-size: 2.5rem;
   font-weight: 400;
-  margin: 24px 0 24px 0;
+  margin: 48px 0 48px 0;
+  line-height: 3rem;
 }
 h3 {
   font-size: 1.18rem;
   font-weight: 700;
   color: #252627;
-  margin: 24px 0 24px 0;
+  margin: 48px 0 48px 0;
+  line-height: 2.5rem;
 }
 p {
   font-size: 1.18rem;
-  margin: 24px 0 24px 0;
+  line-height: 2.2rem;
 }
 a:link,
 a:visited,
@@ -134,4 +136,7 @@ a:active {
 a:hover {
   color: #48aeff;
   text-decoration: underline;
+}
+.title {
+  margin-top: 0px;
 }
