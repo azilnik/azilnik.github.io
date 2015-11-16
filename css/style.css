@@ -1,5 +1,5 @@
 @import "animate.css";
-@import "normalize.css";
+@import "reset.css";
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,300,700");
 html,
 body {
@@ -62,6 +62,7 @@ body {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  font-size: 32px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -70,6 +71,8 @@ body {
   color: #252627;
   border: 5px solid #252627;
   border-radius: 37.5px;
+  margin: 24px;
+  margin-bottom: 0px;
 }
 footer {
   display: -webkit-box;
@@ -91,12 +94,12 @@ footer {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  margin: 24px 0 24px 0;
 }
 .cta {
   color: #6f7275;
 }
 .line {
-  margin: 10px;
   width: 30%;
   height: 2px;
   background-color: #b9bec3;
@@ -105,18 +108,22 @@ h1 {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
   color: #252627;
+  margin: 24px 0 24px 0;
 }
 h2 {
   font-size: 2.5rem;
   font-weight: 400;
+  margin: 24px 0 24px 0;
 }
 h3 {
   font-size: 1.18rem;
   font-weight: 700;
   color: #252627;
+  margin: 24px 0 24px 0;
 }
 p {
   font-size: 1.18rem;
+  margin: 24px 0 24px 0;
 }
 a:link,
 a:visited,
