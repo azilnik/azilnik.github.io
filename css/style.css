@@ -94,6 +94,7 @@ footer {
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 48px 0 48px 0;
+  margin-bottom: 0px;
 }
 .cta {
   color: #6f7275;
