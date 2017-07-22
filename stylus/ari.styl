@@ -1,4 +1,16 @@
 @import colors
+
+@font-face {
+    font-family: 'Da-Streets';
+    src:url('Da-Streets.ttf.woff') format('woff'),
+        url('Da-Streets.ttf.svg#Da-Streets') format('svg'),
+        url('Da-Streets.ttf.eot'),
+        url('Da-Streets.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 logo-size = 75px
 spacing = 48px
 my-margin = spacing 0 spacing 0
@@ -77,3 +89,17 @@ a:hover
 
 .title
 	margin-top 0px
+.location
+	flex-center()
+	.nyc
+		z-axis -2
+	.toronto
+		position absolute
+		color tufte-background
+		transform rotate(-5deg) !important
+		font-family 'Da-Streets'
+		background-color rgba(tufte-foreground,0.9)
+		padding-left 24px
+		padding-right 24px
+		letter-spacing 2px
+		margin-top 10px
