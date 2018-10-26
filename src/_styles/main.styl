@@ -1,0 +1,80 @@
+// Normalize Styles
+@import '../../node_modules/normalize.css/normalize.css';
+
+// Import Modules
+@import '../_modules/link/link';
+
+
+// SCANLINES
+
+.background
+  height 100%
+  width 100%
+  overflow hidden
+  background-size cover
+	position relative
+  &:after
+		background-image repeating-linear-gradient(to bottom, transparent 0, transparent 1px, #FFF 1px, #FFF 2px)
+		background-size 100% 2px, cover
+		-webkit-transform-origin 50% 50%
+		transform-origin 50% 50%
+		-webkit-transform rotate(0deg)
+		transform rotate(0deg)
+		content ''
+		opacity 0.3
+		position absolute
+		top -150%
+		left -150%
+		right -150%
+		bottom -150%
+
+
+// END
+
+// Box sizing partial styles
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+
+
+// Variables
+
+myBlack = #000
+myWhite = #fff
+myFont = 'VT323', monospace;
+
+// Main
+
+body, html, .container
+  min-height 100vh
+  width 100%
+  font-family myFont
+  background-color myBlack
+
+.container
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+  .box
+    outline 4pt myWhite solid
+    margin-top 2pt
+    margin-left 2pt
+    width 70%
+    max-width 500pt
+    color myWhite
+    padding 16pt
+    @media (max-width: 500px)
+      width 90%
+    h1
+      font-size 36pt
+      @media (max-width: 500px)
+        font-size 24pt
+    p
+      font-size 24pt
+      @media (max-width: 500px)
+        font-size 16pt

@@ -1,0 +1,12 @@
+{
+  "generator-yeogurt": {
+    "config": {
+      "projectName": "Ari",
+      "htmlOption": "jade",
+      "jsPreprocessor": "none",
+      "cssOption": "stylus",
+      "testFramework": "none"
+    },
+    "version": "2.0.1"
+  }
+}

@@ -1,38 +1,64 @@
+'use strict';
+
 var gulp = require('gulp');
-var stylus = require('gulp-stylus');
-connect = require('gulp-connect');
+var gulpLoadPlugins = require('gulp-load-plugins');
+var browserSyncLib = require('browser-sync');
+var pjson = require('./package.json');
+var minimist = require('minimist');
+var glob = require('glob');
 
-// Connect server, and make LiveReload happen
-gulp.task('connect', function() {
-  connect.server({
-    root: './',
-    livereload: true
-  });
+// Load all gulp plugins based on their names
+// EX: gulp-copy -> copy
+var plugins = gulpLoadPlugins();
+
+var config = pjson.config;
+config.defaultNotification = function(err) {
+  return {
+    subtitle: err.plugin,
+    message: err.message,
+    sound: 'Funk',
+    onLast: true,
+  };
+};
+var args = minimist(process.argv.slice(2));
+var dirs = config.directories;
+var taskTarget = args.production ? dirs.destination : dirs.temporary;
+
+// Create a new browserSync instance
+var browserSync = browserSyncLib.create();
+
+// This will grab all js in the `gulp` directory
+// in order to load all gulp tasks
+glob.sync('./gulp/**/*.js').filter(function(file) {
+  return (/\.(js)$/i).test(file);
+}).map(function(file) {
+  require(file)(gulp, plugins, args, config, taskTarget, browserSync);
 });
 
-// Get all .styl files in one folder and render
-gulp.task('stylus', function () {
-    console.log('Hello!')
-    gulp.src('./stylus/*.styl')
-        .pipe(stylus())
-        .pipe(gulp.dest('css'));
+// Default task
+gulp.task('default', ['clean'], function() {
+  gulp.start('build');
 });
 
-// Watch HTML for changes, and Live Reload
-gulp.task('html', function () {
-  gulp.src('./*.html')
-    .pipe(connect.reload());
-});
+// Build production-ready code
+gulp.task('build', [
+  'copy',
+  'imagemin',
+  'jade',
+  'stylus',
+  'browserify'
+]);
 
-// Watch for changes
-gulp.task('watch', function () {
-  gulp.watch(['stylus/*.styl'], ['stylus']);
-  gulp.watch(['*.html'], ['html']);
-  gulp.watch(['css/*'], ['html']);
-});
+// Server tasks with watch
+gulp.task('serve', [
+  'imagemin',
+  'copy',
+  'jade',
+  'stylus',
+  'browserify',
+  'browserSync',
+  'watch'
+]);
 
-
-//Run tasks
-gulp.task('default', ['connect', 'stylus', 'html', 'watch'], function() {
-
-});
+// Testing
+gulp.task('test', ['eslint']);
