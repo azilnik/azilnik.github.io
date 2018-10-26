@@ -5,6 +5,13 @@ body {
   background-color: #fffff8;
   color: #252627;
 }
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    color: #fffff8;
+    background-color: #252627;
+  }
+}
 .container {
   max-width: 53rem;
   width: 80%;
@@ -63,9 +70,21 @@ a:active {
   color: #3c91e6;
   text-decoration: none;
 }
+@media (prefers-color-scheme: dark) {
+  a:link,
+  a:visited,
+  a:active {
+    color: #96c4f2;
+  }
+}
 a:hover {
   color: #48aeff;
   text-decoration: underline;
+}
+@media (prefers-color-scheme: dark) {
+  a:hover {
+    color: #96c4f2;
+  }
 }
 .title {
   margin-top: 0px;
