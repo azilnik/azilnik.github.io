@@ -118,7 +118,15 @@ a:hover {
   .container {
     padding: var(--line-height) 20px;
   }
+
   body::before{
     opacity: 0;
+  }
+
+  h1, p {
+    text-shadow: 1px -2px 1px rgba(126, 255, 170, 0.15), -4px 0px 1px rgba(255, 0, 0, 0.15), 4px 0px 1px rgba(0, 194, 255, 0.10);
+   
+    filter: (0.0x);
+
   }
 }
