@@ -85,7 +85,7 @@
   }
   .container {
     width:90%;
-    max-width: 700px;
+    max-width: 650px;
     padding: 64px 16px;
     /* transform: rotate(-0.2deg); */
     transition: var(--animation-duration);
