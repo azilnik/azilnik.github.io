@@ -91,9 +91,15 @@
     transition: var(--animation-duration);
 
   }
-  body::before {    
+  body::before {
     content: "";
-    background-image:url('img/vhs.gif');
+    background-image:url('img/vhs.gif'); /* Fallback */
+    background-image: -webkit-image-set(
+      url('img/vhs.webp') 1x
+    );
+    background-image: image-set(
+      url('img/vhs.webp') 1x
+    );
     background-size: cover;
     position: fixed;
     top: 0px;
