@@ -15,6 +15,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ari Zilnik is a product designer.</title>
     <meta name="description" content="Ari Zilnik is a player-coach product design leader who ships great products and enjoys niche 90's nostalgia."/>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ari.zilnik.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ari.zilnik.com/" />
+    <meta property="og:title" content="Ari Zilnik - Product Design Leader" />
+    <meta property="og:description" content="Player-coach product design leader who ships great products and enjoys niche 90's nostalgia. Currently Head of Design at Join." />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Ari Zilnik - Product Design Leader" />
+    <meta name="twitter:description" content="Player-coach product design leader who ships great products and enjoys niche 90's nostalgia. Currently Head of Design at Join." />
+
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@400&family=VT323&display=swap" rel="stylesheet">
@@ -28,14 +43,40 @@
     <meta name="msapplication-navbutton-color" content="#111111">
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="#111111">
-    <link rel="stylesheet" href="style.css "> 
+    <link rel="stylesheet" href="style.css ">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ari Zilnik",
+      "url": "https://ari.zilnik.com",
+      "jobTitle": "Head of Design",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Join",
+        "url": "https://join.build"
+      },
+      "description": "Player-coach product design leader who ships great products and enjoys niche 90's nostalgia.",
+      "knowsAbout": ["Product Design", "UX Design", "Design Leadership", "Design Systems"],
+      "sameAs": [
+        "https://www.linkedin.com/in/azilnik/",
+        "https://read.cv/ariz"
+      ]
+    }
+    </script>
   </head>
   <body>
-  <div class="container">
-      <h1>Ari&nbsp;Zilnik is a player-coach product&nbsp;design&nbsp;leader who ships great&nbsp;products and enjoys niche 90's&nbsp;nostalgia.
-        <span class="emoji">📼</span>
-      </h1>
-      <p>Ari is currently Head of Design at
+  <main class="container" role="main">
+      <header>
+        <h1>Ari&nbsp;Zilnik is a player-coach product&nbsp;design&nbsp;leader who ships great&nbsp;products and enjoys niche 90's&nbsp;nostalgia.
+          <span class="emoji">📼</span>
+        </h1>
+      </header>
+
+      <section aria-label="Professional Experience">
+        <p>Ari is currently Head of Design at
         <a href="http://join.build">Join</a>,
         a construction project management platform helping general contractors make better decisions.
       </p>
@@ -53,10 +94,14 @@
         <a href="https://www.jet.com/">Jet.com</a> (acquired by Walmart) and
         <a href="https://lab49.com/">Lab49</a>.
       </p>
-      <p>You can get in touch with an
-        <a href="mailto:&#119;&#101;&#098;&#115;&#105;&#116;&#101;&#064;&#122;&#105;&#108;&#110;&#105;&#107;&#046;&#099;&#111;&#109;">email</a>.
-      </p>
-      <p class="emoji">🙌</p>
-  </div>  
+      </section>
+
+      <footer>
+        <p>You can get in touch with an
+          <a href="mailto:&#119;&#101;&#098;&#115;&#105;&#116;&#101;&#064;&#122;&#105;&#108;&#110;&#105;&#107;&#046;&#099;&#111;&#109;">email</a>.
+        </p>
+        <p class="emoji">🙌</p>
+      </footer>
+  </main>  
   </body>
 </html>

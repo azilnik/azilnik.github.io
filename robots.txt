@@ -1,0 +1,6 @@
+# robots.txt for ari.zilnik.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ari.zilnik.com/sitemap.xml
