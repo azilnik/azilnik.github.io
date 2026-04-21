@@ -126,6 +126,11 @@ a:visited {
 a:hover {
   color: rgba(255, 120, 120, 0.9);
 }
+a:focus-visible {
+  outline: 2px solid rgba(255, 168, 168, 0.8);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
 
 
 /* Transitions for mobile */
@@ -146,7 +151,7 @@ a:hover {
 
   h1, p {
     text-shadow: 1px -2px 1px rgba(126, 255, 170, 0.15), -4px 0px 1px rgba(255, 0, 0, 0.15), 4px 0px 1px rgba(0, 194, 255, 0.10);
-    filter: blur(0.0x);
+    filter: blur(0px);
 
   }
 }
